@@ -85,12 +85,19 @@ function addCarouselImageHeaderButton(app, buttons) {
     if (!actor?.isOwner || game.system?.id !== "gum") return;
     if (buttons.some(button => button.class === "combat-tracker-dock-carousel-image-header")) return;
 
-    buttons.push({
+    const carouselButton = {
         label: game.i18n.localize(`${MODULE_ID}.actorSheet.carouselImage.button`),
         class: "combat-tracker-dock-carousel-image-header",
         icon: "fas fa-images",
         onclick: () => openCarouselImageDialog(actor),
-    });
+    };
+    const closeIndex = buttons.findIndex(button =>
+        /close|fechar/i.test(String(button?.class ?? ""))
+        || /close|fechar/i.test(String(button?.label ?? ""))
+        || /fa-times|fa-xmark/i.test(String(button?.icon ?? ""))
+    );
+    if (closeIndex >= 0) buttons.splice(closeIndex, 0, carouselButton);
+    else buttons.push(carouselButton);
 }
 
 /**
