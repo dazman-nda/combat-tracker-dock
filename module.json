@@ -1,0 +1,34 @@
+{
+    "title": "Carousel Combat Tracker — GUM Custom",
+    "description": "Custom GUM build of the Carousel Combat Tracker with actor carousel images and continuous GURPS health display.",
+    "id": "combat-tracker-dock",
+    "version": "1.0.1",
+    "authors": [
+        {
+            "name": "theripper93",
+            "email": "tsplab@gmail.com",
+            "url": "https://www.patreon.com/theripper93"
+        }
+    ],
+    "languages": [
+        {
+            "lang": "en",
+            "name": "English",
+            "path": "languages/en.json"
+        }
+    ],
+    "scripts": [],
+    "esmodules": ["index.js"],
+    "styles": ["styles/module.css"],
+    "packs": [],
+    "url": "https://github.com/dazman-nda/combat-tracker-dock",
+    "manifest": "https://raw.githubusercontent.com/dazman-nda/combat-tracker-dock/main/module.json",
+    "download": "https://github.com/dazman-nda/combat-tracker-dock/releases/download/1.0.1/module.zip",
+    "relationships": {
+        "requires": []
+    },
+    "compatibility": {
+        "minimum": "14",
+        "verified": "14"
+    }
+}
